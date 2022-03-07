@@ -16,8 +16,11 @@ En lien avec la charte graphique de l’entreprise, mettant en avant des éléme
 
 ## Description
 Coordonnateur CNO : Clara
+
 Pôle graphisme : Nina
+
 Pôle audiovisuel : Fantine, Titouan
 
 Coordonnateur MIASHS : Saliha
+
 Equipiers MIASHS : Raissa, Yann, Zaineb
