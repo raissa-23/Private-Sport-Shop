@@ -13,3 +13,11 @@ Pays de livraison, version du site sur laquelle s'est connecté le membre, trafi
 ## Enjeux Communication 
 Création de supports de communication pour promouvoir l’outil
 En lien avec la charte graphique de l’entreprise, mettant en avant des éléments relatifs au sport et ses valeurs. 
+
+## Description
+Coordonnateur CNO : Clara
+Pôle graphisme : Nina
+Pôle audiovisuel : Fantine, Titouan
+
+Coordonnateur MIASHS : Saliha
+Equipiers MIASHS : Raissa, Yann, Zaineb
