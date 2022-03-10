@@ -36,9 +36,12 @@ leaflet(vente_coord,options = leafletOptions(minZoom = 0, maxZoom = 18)) %>%
   #addMarkers(lng=2.209667, lat=46.232193, popup="Nous sommes les chmpions du maraton Web")
   
   #recuperation des données pour les afficher dans la carte
-  #On peut Remplacer "countries" par l'information que l'on veut afficher dans la carte
+  #On peut Remplacer en argument l'information que l'on veut afficher dans la carte (ex:total_ventes_pays2021)
   addMarkers(~long, ~lat, popup = ~as.character(total_ventes_pays2021), label = ~as.character(total_ventes_pays2021))
+  
 
+#Le code ci-dessous c'est pour afficher les cercle dans la carte
+#addCircleMarkers(data=vente_coord, radius=~sqrt(total_ventes_pays2021)/40,weight = 1, color = "#a500a5", fillOpacity = 0.5) 
 #m
 
 
