@@ -167,7 +167,7 @@ newadress2011 <- newadress2011%>%
 
 
 ##################################
-#Tout comme pour les dataset des commandes, nous allons procédons à quelque modification
+#Tout comme pour les dataset des commandes, nous allons procéder à quelque modification
 #Conserver uniquement la nouvelle colonne des pays (country_mod et l'id_address)
 #Voir un exemple ci-dessous
 
@@ -240,7 +240,10 @@ sommeClientsParPays <- identifiant %>%
   group_by(country_mod) %>% 
   mutate(sommePays=sum(NbClients)) %>% 
   select(-NbClients) %>% 
-  distinct()
+  distinct() %>% 
+  rename(countries=country_mod) %>% 
+  rename(NbClients=sommePays)
+  
   
 #########
 #Visualisation
@@ -249,29 +252,29 @@ sommeClientsParPays <-sommeClientsParPays%>%drop_na()
 
 #Visualisation avec la France des nb de comptes par pays
 
-Visu_F <-ggplot(data=sommeClientsParPays, mapping = aes(x=country_mod, y=sommePays)) +
+Visu_F <-ggplot(data=sommeClientsParPays, mapping = aes(x=countries, y=NbClients)) +
             geom_col()
 Visu_F
 
 #Visualisation sans la France
 
 sansFrance <-sommeClientsParPays%>%
-  filter(country_mod!="France")
+  filter(countries!="France")
 
-Visu_sansFrance <- ggplot(data=sansFrance, mapping = aes(x=country_mod, y=sommePays)) +
+Visu_sansFrance <- ggplot(data=sansFrance, mapping = aes(x=countries, y=NbClients)) +
                       geom_col()
 Visu_sansFrance
 
 #Sans le top 5 (France,Italie, Espagne, Belgique et Allemagne)
 
 sansVersion <-sommeClientsParPays%>%
-  filter(country_mod!="France")%>%
-  filter(country_mod!="Espagne")%>%
-  filter(country_mod!="Italie")%>%
-  filter(country_mod!="Belgique")%>%
-  filter(country_mod!="Allemagne")
+  filter(countries!="France")%>%
+  filter(countries!="Espagne")%>%
+  filter(countries!="Italie")%>%
+  filter(countries!="Belgique")%>%
+  filter(countries!="Allemagne")
 
-Visu_sanstop5 <- ggplot(data=sansVersion, mapping = aes(x=country_mod, y=sommePays)) +
+Visu_sanstop5 <- ggplot(data=sansVersion, mapping = aes(x=countries, y=NbClients)) +
                     geom_col()
 Visu_sanstop5
 
