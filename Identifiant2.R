@@ -421,4 +421,20 @@ table <- left_join(table,Nb_client2013, by="country_mod")
 table <- left_join(table,Nb_client2012, by="country_mod")
 table <- left_join(table,Nb_client2011, by="country_mod")
 
-View(table)
+tableCl <- table %>% 
+  rename(countries=country_mod)%>%
+  filter(!(countries %in% c("Allemagne", "Autriche", "Belgique","Royaume-Uni","France","Italie","Pays-bas",
+                            "Espagne"))) %>% 
+     rename(sommeClients2011=sommePays2011)%>% 
+     rename(sommeClients2012=sommePays2012)%>% 
+     rename(sommeClients2013=sommePays2013)%>% 
+     rename(sommeClients2014=sommePays2014)%>% 
+     rename(sommeClients2015=sommePays2015)%>% 
+     rename(sommeClients2016=sommePays2016)%>% 
+     rename(sommeClients2017=sommePays2017)%>% 
+     rename(sommeClients2018=sommePays2018)%>% 
+     rename(sommeClients2019=sommePays2019)%>% 
+     rename(sommeClients2020=sommePays2020)%>% 
+     rename(sommeClients2021=sommePays2021)
+  
+
